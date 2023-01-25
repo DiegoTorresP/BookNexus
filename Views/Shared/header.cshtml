@@ -1,0 +1,41 @@
+﻿<!-- Navbar -->
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 navPrincipal">
+
+
+
+            <div class="container-fluid text-center navComplete">
+        <div class="row align-items-start">
+            <div class="col" style="text-align: left;">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col">
+                <a class="navbar-brand" asp-area="" asp-controller="Books" asp-action="Index">BookNexus</a>
+            </div>
+            <div class="col" >
+                <div class="collapse navbar-collapse" style="text-align: right;" id="navbarSupportedContent">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+                    <img class="fotoPerfil" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg"/>
+                </div>
+
+            </div>
+        </div>
+
+
+            </div>
+        </nav>

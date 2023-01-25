@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookNexus.Data;
 using BookNexus.Models;
+using SmartBreadcrumbs.Attributes;
 
 namespace BookNexus.Controllers
 {

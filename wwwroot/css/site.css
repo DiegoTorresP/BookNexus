@@ -16,3 +16,19 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navComplete {
+    display: initial !important;
+}
+
+.fotoPerfil {
+border-radius:50%;
+width:35px;
+height:35px;
+background-color:orange;
+margin-left:20px;
+}
+
+.navPrincipal {
+    background-color: #F85008;
+}
