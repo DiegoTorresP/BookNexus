@@ -1,5 +1,6 @@
 ﻿using BookNexus.Models;
 using Microsoft.AspNetCore.Mvc;
+using SmartBreadcrumbs.Attributes;
 using System.Diagnostics;
 
 namespace BookNexus.Controllers
@@ -13,11 +14,13 @@ namespace BookNexus.Controllers
             _logger = logger;
         }
 
+        [Breadcrumb("Index")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Breadcrumb("Privacy")]
         public IActionResult Privacy()
         {
             return View();
