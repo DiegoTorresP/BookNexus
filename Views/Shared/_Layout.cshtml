@@ -13,10 +13,21 @@
         @await Html.PartialAsync("header.cshtml")
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
-            <breadcrumb></breadcrumb>
-            @RenderBody()
-        </main>
+        <div class="row">
+            <div class="col-lg-2 order-2 order-lg-1">
+                Actividad
+            </div>
+            <div class="col-lg-8 order-1 order-lg-2">
+                <main role="main" class="pb-3">
+                    <breadcrumb></breadcrumb>
+                    @RenderBody()
+                </main>
+            </div>
+            <div class="col-lg-2 order-3">
+                Notificaciones
+            </div>
+        </div>
+
     </div>
 
     <footer class="border-top footer text-muted">

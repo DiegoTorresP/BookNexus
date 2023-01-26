@@ -21,12 +21,14 @@ namespace BookNexus.Controllers
         }
 
         // GET: Books
+        [Breadcrumb("Lista de Libros")]
         public async Task<IActionResult> Index()
         {
               return View(await _context.Book.ToListAsync());
         }
 
         // GET: Books/Details/5
+        [Breadcrumb("Detalles")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Book == null)
@@ -45,6 +47,7 @@ namespace BookNexus.Controllers
         }
 
         // GET: Books/Create
+        [Breadcrumb("Crear")]
         public IActionResult Create()
         {
             return View();
@@ -67,6 +70,7 @@ namespace BookNexus.Controllers
         }
 
         // GET: Books/Edit/5
+        [Breadcrumb("Editar")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Book == null)
@@ -118,6 +122,8 @@ namespace BookNexus.Controllers
         }
 
         // GET: Books/Delete/5
+
+        [Breadcrumb("Eliminar")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Book == null)
