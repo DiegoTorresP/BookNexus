@@ -13,26 +13,28 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Books" asp-action="Index">Libros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="col">
-                <a class="navbar-brand" asp-area="" asp-controller="Books" asp-action="Index">BookNexus</a>
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">BookNexus</a>
             </div>
-            <div class="col" >
-                <div class="collapse navbar-collapse" style="text-align: right;" id="navbarSupportedContent">
+            <div class="col" style="text-align: right;">
+@*                <div class="collapse navbar-collapse" style="text-align: right;" id="navbarSupportedContent">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-success" type="submit">Search</button>
                 </form>
-                    <img class="fotoPerfil" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg"/>
-                </div>
-
+                    
+                </div>*@
+                <a class="nav-link text-light" asp-area="" asp-controller="HelloWorld" asp-action="Index">
+                    <img class="fotoPerfil" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" />
+                </a>
             </div>
         </div>
 
