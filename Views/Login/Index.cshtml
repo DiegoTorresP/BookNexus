@@ -157,19 +157,18 @@
     <title>Login</title>
 </head>
     <body>
-    <form class="login" action="validarSesion" method="post">
-
+    <form class="login">
         <fieldset>
 
             <legend class="legend">Login</legend>
 
             <div class="input">
-                <input type="email" placeholder="Email" required />
+                <input type="email" id="txtEmail" placeholder="Email" required />
                 <span><i class="fa fa-envelope-o"></i></span>
             </div>
 
             <div class="input">
-                <input type="password" placeholder="Password" required />
+                <input type="password" id="txtPassword" placeholder="Password" required />
                 <span><i class="fa fa-lock"></i></span>
             </div>
 
@@ -204,8 +203,31 @@
 
         $("#hbtnInicioSesion").on("click", function(e){
             e.preventDefault()
-            window.location.href = '../../Home/Index';
+            var email = $("#txtEmail").val()
+            var password = $("#txtPassword").val()
+            sendAjaxRequestLogin(email,password)
         })
+        function sendAjaxRequestLogin(email,password) {
+            $.ajax({
+                url: '../../Login/validarSesion', // URL del controlador y la acción a la que se llama
+                type: 'POST', // El tipo de solicitud (puede ser GET, POST, PUT, DELETE, etc.)
+                data: { // Los datos que se envían con la solicitud
+                    Email: email,
+                    Password: password
+                },
+                success: function (response) { // La función que se ejecuta cuando la solicitud es exitosa
+                    // Código para manejar la respuesta del servidor
+                    console.log(JSON.stringify(response))
+                    if(response.isValidate == 1){
+                        window.location.href = '../../Home/Index';
+                    }
+                },
+                error: function (xhr, status, error) { // La función que se ejecuta cuando ocurre un error
+                    // Código para manejar el error
+                }
+            });
+        }
+
     </script>
     </body>
 

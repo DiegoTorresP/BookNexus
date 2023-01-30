@@ -5,6 +5,7 @@ using System.Diagnostics;
 
 namespace BookNexus.Controllers
 {
+    [DefaultBreadcrumb("Home")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -14,7 +15,6 @@ namespace BookNexus.Controllers
             _logger = logger;
         }
 
-        [Breadcrumb("Index")]
         public IActionResult Index()
         {
             return View();

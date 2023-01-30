@@ -3,12 +3,11 @@ using System.Text.Encodings.Web;
 using SmartBreadcrumbs.Attributes;
 namespace MvcMovie.Controllers
 {
-    [DefaultBreadcrumb("Home")]
-
     public class HelloWorldController : Controller
     {
         // 
         // GET: /HelloWorld/
+        [Breadcrumb("Tu Perfil")]
         public IActionResult Index()
         {
             return View();
