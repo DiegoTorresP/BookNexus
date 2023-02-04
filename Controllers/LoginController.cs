@@ -18,7 +18,7 @@ namespace BookNexus.Controllers
         [HttpPost]
         public Login validarSesion(string Email, string Password)
         {
-            Login obj_login = new Login(Email,Password,0);
+            Login obj_login = new Login(Email, Password, 0);
             obj_login.Email = Email;
             obj_login.Password = Password;
             obj_login.validarSesion();
