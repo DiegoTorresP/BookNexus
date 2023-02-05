@@ -1,235 +1,397 @@
 ﻿@{
    Layout = "";
 }
-<html lang="es">
+<!--
+
+=========================================================
+* Swipe - Mobile App One Page Bootstrap 5 Template
+=========================================================
+
+* Product Page: https://themesberg.com/product/bootstrap/swipe-free-mobile-app-one-page-bootstrap-5-template
+* Copyright 2020 Themesberg (https://www.themesberg.com)
+
+* Coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Contact us if you want to remove it.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="~/lib/imagenes/iconoHeader.png">
-    <!-- Boostrap 5 NCD -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
-    <style>
-/*        // Set background image (pattern)*/
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- Primary Meta Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Swipe - Mobile App One Page Bootstrap 5 Template">
+<meta name="author" content="Themesberg">
+<meta name="description" content="Free Mobile Application One Page Bootstrap 5 Template by Themesberg">
+<meta name="keywords" content="bootstrap, bootstrap 5, bootstrap 5 one page, bootstrap 5 mobile application, one page template, bootstrap 5 one page template, themesberg, themesberg one page, one page template bootstrap 5" />
+<link rel="canonical" href="https://themesberg.com/product/bootstrap/swipe-free-mobile-app-one-page-bootstrap-5-template">
 
-        * {
-            -ms-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            border: 0;
-        }
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://demo.themesberg.com/swipe/">
+<meta property="og:title" content="Swipe - Mobile App One Page Bootstrap 5 Template">
+<meta property="og:description" content="Free Mobile Application One Page Bootstrap 5 Template by Themesberg">
+<meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/swipe/swipe-thumbnail.jpg">
 
-        html, body {
-            width: 100%;
-            height: 100%;
-            background: url(https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg) repeat fixed;
-            font-weight: 200;
-        }
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://demo.themesberg.com/swipe/">
+<meta property="twitter:title" content="Swipe - Mobile App One Page Bootstrap 5 Template">
+<meta property="twitter:description" content="Free Mobile Application One Page Bootstrap 5 Template by Themesberg">
+<meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/swipe/swipe-thumbnail.jpg">
 
-/*        // Start styles in form*/
+<!-- Favicon -->
+@*<link rel="apple-touch-icon" sizes="120x120" href="~/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/favicon/favicon-16x16.png">*@
+<link rel="icon" type="image/png" href="~/lib/imagenes/iconoHeader.png">
+<link rel="manifest" href="~/assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="~/assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 
-        .login {
-            position: relative;
-            top: 50%;
-            width: 250px;
-            display: table;
-            margin: -150px auto 0 auto;
-            background: #fff;
-            border-radius: 4px;
-        }
+<!-- Fontawesome -->
+<link type="text/css" href="~/vendor/fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<!-- Swipe CSS -->
+<link type="text/css" href="~/cssLanding/swipe.css" rel="stylesheet">
 
-        .legend {
-            position: relative;
-            width: 100%;
-            display: block;
-            background: #FF7052;
-            padding: 15px;
-            color: #fff;
-            font-size: 20px;
-            &:after
-
-        {
-            content: "";
-            background-image: url(http://simpleicon.com/wp-content/uploads/multy-user.png);
-            background-size: 100px 100px;
-            background-repeat: no-repeat;
-            background-position: 152px -16px;
-            opacity: 0.06;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-        }
-
-        }
-
-        .input {
-            position: relative;
-            width: 90%;
-            margin: 15px auto;
-            span
-
-        {
-            position: absolute;
-            display: block;
-            color: darken(#EDEDED, 10%);
-            left: 10px;
-            top: 8px;
-            font-size: 20px;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px 5px 10px 40px;
-            display: block;
-            border: 1px solid #EDEDED;
-            border-radius: 4px;
-            transition: 0.2s ease-out;
-            color: darken(#EDEDED, 30%);
-            &:focus
-
-        {
-            padding: 10px 5px 10px 10px;
-            outline: 0;
-            border-color: #FF7052;
-        }
-
-        }
-        }
-
-        .submit {
-            width: 45px;
-            height: 45px;
-            display: block;
-            margin: 0 auto -15px auto;
-            background: #fff;
-            border-radius: 100%;
-            border: 1px solid #FF7052;
-            color: #FF7052;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0px 0px 0px 7px #fff;
-            transition: 0.2s ease-out;
-            &:hover, &:focus
-
-        {
-            background: #FF7052;
-            color: #fff;
-            outline: 0;
-        }
-
-        }
-
-        .feedback {
-            position: absolute;
-            bottom: -70px;
-            width: 100%;
-            text-align: center;
-            color: #fff;
-            background: #2ecc71;
-            padding: 10px 0;
-            font-size: 12px;
-            display: none;
-            opacity: 0;
-            &:before
-
-        {
-            bottom: 100%;
-            left: 50%;
-            border: solid transparent;
-            content: "";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-color: rgba(46, 204, 113, 0);
-            border-bottom-color: #2ecc71;
-            border-width: 10px;
-            margin-left: -10px;
-        }
-
-        }
-    </style>
-@*    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />*@
-    <title>Login</title>
+<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    <title>Bookzu</title>
 </head>
-    <body>
-    <form class="login">
-        <fieldset>
 
-            <legend class="legend">Login</legend>
-
-            <div class="input">
-                <input type="email" id="txtEmail" placeholder="Email" required />
-                <span><i class="fa fa-envelope-o"></i></span>
+<body>
+    <header class="header-global" id="home">
+        <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-theme-secondary" style="background-color: #183B56">
+        <div class="container position-relative">
+            <a class="navbar-brand mr-lg-4" asp-area="" asp-controller="Login" asp-action="Inicio">
+                    <img class="navbar-brand-dark" src="~/lib/imagenes/iconoFavicon.png" alt="Logo dark">
+                    <img class="navbar-brand-light" src="~/lib/imagenes/iconoFavicon.png" alt="Logo light">
+            </a>
+            <div class="navbar-collapse collapse mr-auto" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a asp-area="" asp-controller="Login" asp-action="Inicio">
+                                <img src="~/lib/imagenes/iconoFavicon.png" alt="Logo dark">
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link" style="color: white;">
+                            Autorias
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="#faq" class="nav-link" style="color: white;">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                            <a href="#download" class="nav-link" style="color: white;">
+                            Únete
+                        </a>
+                    </li>
+                </ul>
             </div>
-
-            <div class="input">
-                <input type="password" id="txtPassword" placeholder="Password" required />
-                <span><i class="fa fa-lock"></i></span>
+            <div class="d-flex align-items-center">
+                <a asp-area="" asp-controller="Login" asp-action="SignUp" class="btn btn-outline-soft d-none d-md-inline mr-md-3 animate-up-2" style="color: white;">Registrate</a>
+                <a asp-area="" asp-controller="Login" asp-action="LogOut" class="btn btn-md btn-tertiary text-white d-none d-md-inline animate-up-2">Inicia Sesión<i class="fas fa-rocket ml-2"></i></a>
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-
-            <button type="submit" class="submit" id="hbtnInicioSesion"><i class="fa fa-long-arrow-right"></i></button>
-
-        </fieldset>
-
-        <div class="feedback">
-            login successful <br />
-            redirecting...
         </div>
+    </nav>
+</header>
+    <main>
+        <!-- Hero -->
+        <section class="section section-header text-dark pb-md-8">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 text-center mb-5 mb-md-7">
+                        <h1 class="display-2 font-weight-bolder mb-4">
+                            Únete a la comunidad de lectores.
+                        </h1>
+                        <p class="lead mb-4 mb-lg-5">Descubre nuevos libros y conversaciones, únete a clubes de lectura y conéctate con amantes de los libros en todo el mundo.</p>
+                        <div>
+                            <a asp-area="" asp-controller="Login" asp-action="LogOut" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                                <span class="d-flex align-items-center">
+                                    <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-sign-in-alt"></span></span>
+                                    <span class="d-inline-block text-left">
+                                        <small class="font-weight-normal d-none d-md-block"></small>Inicia Sesión 
+                                    </span> 
+                                </span>
+                            </a>
+                            <a asp-area="" asp-controller="Login" asp-action="SignUp" class="btn btn-dark btn-download-app">
+                                <span class="d-flex align-items-center">
+                                    <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-keyboard"></span></span>
+                                    <span class="d-inline-block text-left">
+                                        <small class="font-weight-normal d-none d-md-block"></small> Registrate
+                                    </span> 
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-10 justify-content-center">
+                        <img class="d-none d-md-inline-block" src="~/assets/img/illustrations/scene.svg" alt="Mobile App Mockup">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg py-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <div class="card border-0 bg-white text-center p-1">
+                            <div class="card-header bg-white border-0 pb-0">
+                                <div class="icon icon-lg icon-primary mb-4">
+                                    <span class="fas fa-book-reader"></span>
+                                </div>
+                                <h2 class="h3 text-dark m-0">Encuentra nuevos libros</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    Usa nuestra biblioteca para encontrar nuevos libros
+                                    y obtén recomendaciones sobre cientos de libros.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                        <div class="card border-0 bg-white text-center p-1">
+                            <div class="card-header bg-white border-0 pb-0">
+                                <div class="icon icon-lg icon-primary mb-4">
+                                    <span class="fas fa-users"></span>
+                                </div>
+                                <h2 class="h3 text-dark m-0">Únete a los clubes de lectura</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    Con Bookzu, puedes unirte a los clubes de lectura y conectarte con lectores con intereses similares de todo el mundo para discutir libros, compartir historias e inspirarse mutuamente.              
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card border-0 bg-white text-center p-1">
+                            <div class="card-header bg-white border-0 pb-0">
+                                <div class="icon icon-lg icon-primary mb-4">
+                                    <span class="fas fa-chart-bar"></span>
+                                </div>
+                                <h2 class="h3 text-dark m-0">Monitorea tu proceso</h2>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    Registra tus lecturas y dales seguimiento con nuestras funciones de control.                
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-lg" id="about">
+            <div class="container">
+                <div class="row justify-content-center mb-5 mb-lg-7">
+                    <div class="col-12 col-lg-8 text-center">
+                        <h2 class="h1 mb-4">Conviértete en autor</h2>
+                        <p class="lead">¿Sueñas con convertirte en escritor y compartir tus ideas con el mundo? ¡Únete a Bookzu y haz que tus sueños se hagan realidad! Aquí, puedes publicar tus obras y conectarte con una comunidad de lectores y escritores apasionados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+        <section class="section section-lg" id="faq">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-12 text-center mb-4 mb-lg-5">
+                        <h2 class="display-3 mb-4">Facts & Questions</h2>
+                        <p class="lead">Have a question? Read through our FAQ below. If you can't find an answer, <br class="d-none d-lg-inline-block"> please email our support team. We're here to help.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <!--Accordion-->
+                        <div class="accordion" id="accordionExample">
+                            <div class="card border-light mb-0">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block d-flex justify-content-between text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="h6 mb-0 font-weight-bold">What is the purpose of a FAQ?</span>
+                                            <span class="icon"><span class="fas fa-plus"></span></span>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="mb-0">
+                                            At Themesberg, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also
+                                            helps them grow. We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.
+                                        </p>                           
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-light mb-0">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block d-flex justify-content-between text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="h6 mb-0 font-weight-bold">What is a FAQ document?</span>
+                                            <span class="icon"><span class="fas fa-plus"></span></span>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="mb-0">
+                                            At Themesberg, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also
+                                            helps them grow. We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.
+                                        </p>                           
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-light mb-0">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block d-flex justify-content-between text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="h6 mb-0 font-weight-bold">What are the top 10 interview questions?</span>
+                                            <span class="icon"><span class="fas fa-plus"></span></span>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="mb-0">
+                                            At Themesberg, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also
+                                            helps them grow. We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.
+                                        </p>                           
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-light mb-0">
+                                <div class="card-header" id="headingFour">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block d-flex justify-content-between text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            <span class="h6 mb-0 font-weight-bold">Cookies?</span>
+                                            <span class="icon"><span class="fas fa-plus"></span></span>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="mb-0">
+                                            At Themesberg, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also
+                                            helps them grow. We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.
+                                        </p>                           
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-light mb-0">
+                                <div class="card-header" id="headingFive">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block d-flex justify-content-between text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            <span class="h6 mb-0 font-weight-bold">Copyright Notice</span>
+                                            <span class="icon"><span class="fas fa-plus"></span></span>
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="mb-0">
+                                            At Themesberg, our mission has always been focused on bringing openness and transparency to the design process. We've always believed that by providing a space where designers can share ongoing work not only empowers them to make better products, it also
+                                            helps them grow. We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.
+                                        </p>                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End of Accordion-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section bg-soft" id="download">
+            <figure class="position-absolute top-0 left-0 w-100 d-none d-md-block mt-n3">
+                <svg class="fill-soft" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1920 43.4" style="enable-background:new 0 0 1920 43.4;" xml:space="preserve">
+                   <path d="M0,23.3c0,0,405.1-43.5,697.6,0c316.5,1.5,108.9-2.6,480.4-14.1c0,0,139-12.2,458.7,14.3 c0,0,67.8,19.2,283.3-22.7v35.1H0V23.3z"></path>
+                </svg>
+            </figure>
+            <div class="container">
+                <div class="row row-grid align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <span class="h5 text-muted mb-2 d-block">Únete</span>
+                        <h2 class="display-3 mb-4">Sé parte de esta historia.</h2>
+                        <p class="lead text-muted">Únete a Bookzu y descubre un mundo lleno de posibilidades literarias ¡Únete hoy mismo y forma parte de una comunidad de amantes de la lectura! </p>
+                        <div class="mt-4 mt-lg-5">
+                            <a asp-area="" asp-controller="Login" asp-action="LogOut" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                                <span class="d-flex align-items-center">
+                                    <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-sign-in-alt"></span></span>
+                                    <span class="d-inline-block text-left">
+                                        <small class="font-weight-normal d-none d-md-block"></small>Inicia Sesión
+                                    </span>
+                                </span>
+                            </a>
+                            <a asp-area="" asp-controller="Login" asp-action="SignUp" class="btn btn-dark btn-download-app">
+                                <span class="d-flex align-items-center">
+                                    <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-keyboard"></span></span>
+                                    <span class="d-inline-block text-left">
+                                        <small class="font-weight-normal d-none d-md-block"></small> Registrate
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 ml-lg-auto">
+                        <img class="d-none d-lg-inline-block" src="~/assets/img/illustrations/scene-3.svg" alt="Mobile App Illustration">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
-    </form>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        $(".input").focusin(function () {
-            $(this).find("span").animate({ "opacity": "0" }, 200);
-        });
+    <footer class="footer py-5 pt-lg-">
+    <div class="sticky-right">
+        <a href="#home" class="icon icon-primary icon-md btn btn-icon-only btn-white border border-soft shadow-soft animate-up-3">
+            <span class="fas fa-chevron-up"></span>
+        </a>
+    </div>
+    <div class="container">
+                <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap" /></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-muted">&copy; 2023 - BookNexus - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></span>
+        </div>
+    </div>
+@*        <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-facebook"></i></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>*@
+</footer>
 
-        $(".input").focusout(function () {
-            $(this).find("span").animate({ "opacity": "1" }, 300);
-        });
+    <!-- Core -->
+<script src="~/vendor/popper.js/dist/umd/popper.min.js"></script>
+<script src="~/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="~/vendor/headroom.js/dist/headroom.min.js"></script>
 
-        $(".login").submit(function () {
-            $(this).find(".submit i").removeAttr('class').addClass("fa fa-check").css({ "color": "#fff" });
-            $(".submit").css({ "background": "#2ecc71", "border-color": "#2ecc71" });
-            $(".feedback").show().animate({ "opacity": "1", "bottom": "-80px" }, 400);
-            $("input").css({ "border-color": "#2ecc71" });
-            return false;
-        });
+<!-- Vendor JS -->
+<script src="~/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="~/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-        $("#hbtnInicioSesion").on("click", function(e){
-            e.preventDefault()
-            var email = $("#txtEmail").val()
-            var password = $("#txtPassword").val()
-            sendAjaxRequestLogin(email,password)
-        })
-        function sendAjaxRequestLogin(email,password) {
-            $.ajax({
-                url: '../../Login/validarSesion', // URL del controlador y la acción a la que se llama
-                type: 'POST', // El tipo de solicitud (puede ser GET, POST, PUT, DELETE, etc.)
-                data: { // Los datos que se envían con la solicitud
-                    Email: email,
-                    Password: password
-                },
-                success: function (response) { // La función que se ejecuta cuando la solicitud es exitosa
-                    // Código para manejar la respuesta del servidor
-                    console.log(JSON.stringify(response))
-                    if(response.isValidate == 1){
-                        window.location.href = '../../Home/Index';
-                    }
-                },
-                error: function (xhr, status, error) { // La función que se ejecuta cuando ocurre un error
-                    // Código para manejar el error
-                }
-            });
-        }
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
-    </script>
-    </body>
+<!-- Swipe JS -->
+<script src="~/assets/js/swipe.js"></script>
+
+</body>
 
 </html>

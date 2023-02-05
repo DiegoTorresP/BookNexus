@@ -8,13 +8,20 @@ namespace BookNexus.Controllers
     {
         public ActionResult Index()
         {
-            return RedirectToAction("LogOut");
+            return RedirectToAction("Inicio");
         }
-        public ActionResult LogOut()
+        public ActionResult Inicio()
         {
             return View("Index");
         }
-
+        public ActionResult SignUp()
+        {
+            return View("sign_up");
+        }
+        public ActionResult LogOut()
+        {
+            return View("sign_in");
+        }
         [HttpPost]
         public Login validarSesion(string Email, string Password)
         {
