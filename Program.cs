@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BookNexus.Data;
 using SmartBreadcrumbs.Extensions;
 using System.Reflection;
+using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BookNexusContext>(options =>

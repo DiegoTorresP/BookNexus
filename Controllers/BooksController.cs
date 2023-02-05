@@ -58,7 +58,7 @@ namespace BookNexus.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Book book)
+        public async Task<IActionResult> Create([Bind("Id,Title,Portada,ReleaseDate,Genre,Price")] Book book)
         {
             if (ModelState.IsValid)
             {

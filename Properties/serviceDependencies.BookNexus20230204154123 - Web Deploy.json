@@ -1,10 +1,13 @@
 {
   "dependencies": {
     "secrets2": {
-      "type": "secrets.user"
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/BookNexusvault",
+      "type": "secrets.keyVault",
+      "connectionId": "VaultUri"
     },
     "mssql2": {
-      "secretStore": "LocalSecretsFile",
+      "secretStore": "AzureKeyVault",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/booknexusdbserver/databases/BookNexus_db",
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:BookNexxus2023Read"
