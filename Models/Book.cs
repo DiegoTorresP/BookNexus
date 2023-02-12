@@ -6,6 +6,7 @@ namespace BookNexus.Models
     {
         public int Id { get; set; }
         public string? Title { get; set; }
+        public string? Portada { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }

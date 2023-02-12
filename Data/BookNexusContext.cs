@@ -15,5 +15,7 @@ namespace BookNexus.Data
         }
 
         public DbSet<BookNexus.Models.Book> Book { get; set; } = default!;
+
+        public DbSet<BookNexus.Models.Usuarios> Usuarios { get; set; }
     }
 }

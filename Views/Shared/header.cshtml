@@ -1,9 +1,6 @@
 ﻿<!-- Navbar -->
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 navPrincipal">
-
-
-
-            <div class="container-fluid text-center navComplete">
+    <div class="container-fluid text-center navComplete">
         <div class="row align-items-start">
             <div class="col" style="text-align: left;">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -22,22 +19,27 @@
                 </div>
             </div>
             <div class="col">
-                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">BookNexus</a>
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/lib/imagenes/iconoFavicon.png"/>
+                    Bookuuz</a>
             </div>
             <div class="col" style="text-align: right;">
-@*                <div class="collapse navbar-collapse" style="text-align: right;" id="navbarSupportedContent">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                </form>
-                    
-                </div>*@
-                <a class="nav-link text-light" asp-area="" asp-controller="HelloWorld" asp-action="Index">
-                    <img class="fotoPerfil" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" />
-                </a>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown" style="display: inline-flex!important;" >
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                            <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p>@ViewBag.nombre</p>
+                                <img class="fotoPerfil" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" />
+                            </a>
+                      <ul class="dropdown-menu dropdown-menu-dark" style="left: -30px;min-width: 0rem;">
+                        <li><a class="dropdown-item" asp-area="" asp-controller="HelloWorld" asp-action="Index">Perfil</a></li>
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Login" asp-action="LogOut">Cerrar Sesión</a></li>
+                      </ul>
+                    </li>
+                   </ul>
+                 </div>
             </div>
         </div>
+    </div>
 
-
-            </div>
-        </nav>
+</nav>

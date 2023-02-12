@@ -1,4 +1,4 @@
-html {
+﻿html {
   font-size: 14px;
 }
 
@@ -31,4 +31,29 @@ margin-left:20px;
 
 .navPrincipal {
     background-color: #37552f;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.notificaciones {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.notificaciones li::before {
+    content: "💡";
+    color: green;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.titleCard {
+    text-decoration:none;
+}
+
+.contenido {
+padding-top:100px;
 }
