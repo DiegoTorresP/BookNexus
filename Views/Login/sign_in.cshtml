@@ -167,7 +167,7 @@
         })
         function sendAjaxRequestLogin(email, password) {
             $.ajax({
-                url: '../../Login/validarSesion', // URL del controlador y la acción a la que se llama
+                url: '../../Usuarios/UsuariosExistsValidation', // URL del controlador y la acción a la que se llama
                 type: 'POST', // El tipo de solicitud (puede ser GET, POST, PUT, DELETE, etc.)
                 data: { // Los datos que se envían con la solicitud
                     Email: email,
@@ -176,8 +176,11 @@
                 success: function (response) { // La función que se ejecuta cuando la solicitud es exitosa
                     // Código para manejar la respuesta del servidor
                     console.log(JSON.stringify(response))
-                    if (response.isValidate == 1) {
+                    if (response == true) {
                         window.location.href = '../../Home/Index';
+                    }
+                    else{
+                    alert("Usuario no registrado")
                     }
                 },
                 error: function (xhr, status, error) { // La función que se ejecuta cuando ocurre un error

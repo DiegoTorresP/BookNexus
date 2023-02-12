@@ -1,11 +1,14 @@
 ﻿using Azure;
 using Microsoft.AspNetCore.Mvc;
 using BookNexus.Data;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace BookNexus.Controllers
 {
     public class LoginController : Controller
     {
+
         public ActionResult Index()
         {
             return RedirectToAction("Inicio");
@@ -20,6 +23,8 @@ namespace BookNexus.Controllers
         }
         public ActionResult LogOut()
         {
+            HttpContext.Session.Remove("_Name");
+            HttpContext.Session.Remove("_Age");
             return View("sign_in");
         }
         [HttpPost]
@@ -31,11 +36,5 @@ namespace BookNexus.Controllers
             obj_login.validarSesion();
             return obj_login;
         }
-        //[HttpPost]
-        //public ActionResult Action(string param1, string param2)
-        //{
-        //    // Código para manejar la solicitud y generar una respuesta
-        //    return Json(response); // Devuelve la respuesta en formato JSON
-        //}
     }
 }

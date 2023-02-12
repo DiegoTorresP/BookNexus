@@ -47,6 +47,5 @@ d.addEventListener("DOMContentLoaded", function(event) {
         speedAsDuration: true
     });
 
-    d.querySelector('.current-year').textContent = new Date().getFullYear();
-
+    //d.querySelector('.current-year').textContent = new Date().getFullYear();
 });

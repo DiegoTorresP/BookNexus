@@ -1,9 +1,12 @@
 {
   "dependencies": {
-    "secrets2": {
-      "type": "secrets.user"
+    "secrets1": {
+      "secretStore": null,
+      "resourceId": null,
+      "type": "secrets.user",
+      "connectionId": null
     },
-    "mssql2": {
+    "mssql1": {
       "secretStore": "LocalSecretsFile",
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/booknexusdbserver/databases/BookNexus_db",
       "type": "mssql.azure",
