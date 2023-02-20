@@ -9,119 +9,155 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="~/BookNexus.styles.css" asp-append-version="true" />
     <link rel="icon" type="image/png" href="~/lib/imagenes/iconoHeader.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css" />
 </head>
 <body>
-    <header>
-        @await Html.PartialAsync("header.cshtml")
-    </header>
-    <div class="container contenido">
-        <div class="row">
-            <div class="col-lg-3 order-2 order-lg-1">
+    @* <div class="video-bg">
+    <video width="320" height="240" autoplay loop muted>
+    <source src="https://static.videezy.com/system/resources/previews/000/051/545/original/Nebula_Background_6.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
+    </div>*@
+    <div class="dark-light">
+        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+    </div>
+    <div class="app">
+        <header>
+            @await Html.PartialAsync("header.cshtml")
+        </header>
+        <div class="wrapper">
+            <div class="lateral col-lg-3 order-2 order-lg-1">
                 <seccion>
-                    <h4 style="margin-top: 40px; text-align:center;">Actividad</h4>
-                    <div class="card w-100" style="margin-top: 40px;">
-                        <div class="card-header">
-                            <a class="titleCard" data-bs-toggle="collapse" href="#collapseActForos" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                Foros
-                            </a>
+                    <div class="side-wrapper">
+                        <div class="side-title">Actividad</div>
+                        <div class="card w-100">
+                            <div class="card-header">
+                                <a data-bs-toggle="collapse" href="#collapseActForos" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Foros
+                                </a>
                             </div>
-                        <div class="card-body collapse" id="collapseActForos">
-                            <h5 class="card-title">Foros</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            @*<a href="#" class="btn btn-primary">Button</a>*@
+                            <div class="card-body collapse" id="collapseActForos">
+                                @*<h5 class="card-title">Foros</h5>*@
+                                <div class="app-card__subtex">With supporting text below as a natural lead-in to additional content.</div>
+                                @*<a href="#" class="btn btn-primary">Button</a>*@
+                            </div>
                         </div>
-                    </div>
-                    <div class="card w-100" style="margin-top: 40px;">
-                        <div class="card-header">
-                            <a class="titleCard" data-bs-toggle="collapse" href="#collapseActClubes" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                Clubes
-                            </a>
+                        <div class="card w-100">
+                            <div class="card-header">
+                                <a data-bs-toggle="collapse" href="#collapseActClubes" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Clubes
+                                </a>
                             </div>
-
-                        <div class="card-body collapse" id="collapseActClubes">
-                            <h5 class="card-title">Clubes</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            @*<a href="#" class="btn btn-primary">Button</a>*@
-
+                            <div class="card-body collapse" id="collapseActClubes">
+                                @*<h5 class="card-title">Foros</h5>*@
+                                <div class="app-card__subtex">With supporting text below as a natural lead-in to additional content.</div>
+                                @*<a href="#" class="btn btn-primary">Button</a>*@
+                            </div>
                         </div>
-                    </div>
-                    <div class="card w-100" style="margin-top: 40px;">
-                        <div class="card-header">
-                            
-                            <a class="titleCard" data-bs-toggle="collapse" href="#collapseActLecturas" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                Lecturas
-                            </a>
+                        <div class="card w-100">
+                            <div class="card-header">
+                                <a data-bs-toggle="collapse" href="#collapseActLecturas" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Lecturas
+                                </a>
                             </div>
-                        <div class="card-body collapse" id="collapseActLecturas">
-                            <h5 class="card-title">Lecturas</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            @*<a href="#" class="btn btn-primary">Button</a>*@
+                            <div class="card-body collapse" id="collapseActLecturas">
+                                @*<h5 class="card-title">Foros</h5>*@
+                                <div class="app-card__subtex">With supporting text below as a natural lead-in to additional content.</div>
+                                @*<a href="#" class="btn btn-primary">Button</a>*@
+                            </div>
                         </div>
                     </div>
                 </seccion>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2">
-                <main role="main" class="pb-3">
+
+            <div class="main-container col-lg-6 order-1 order-lg-2">
+                <div class="main-header">
                     <breadcrumb></breadcrumb>
-                    @RenderBody()
-                </main>
+                    @*                    <a class="menu-link-main" href="#">All Apps</a>
+                    *@                    @*<div class="header-menu">
+                    <a class="main-header-link is-active" href="#">Desktop</a>
+                    <a class="main-header-link" href="#">Mobile</a>
+                    <a class="main-header-link" href="#">Web</a>
+
+                    </div>*@
+                   @*<div class="menu-circle"></div>*@ 
+                </div>
+                <div class="content-wrapper">
+                    <div class="content-wrapper-header">
+                        <div class="content-wrapper-context">
+                            <h3 class="img-content">
+                                <img src="~/lib/imagenes/iconoFavicon.png" />
+                                Bookuuz
+                            </h3>
+                            <div class="content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </div>
+                            <button class="content-button">Button</button>
+                        </div>
+                        <img class="content-wrapper-img" src="https://assets.codepen.io/3364143/glass.png" alt="">
+                    </div>
+                    <div class="content-section">
+                        <main role="main" class="pb-3">
+                            @RenderBody()
+                        </main>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-3 order-3">
+            <div class="lateral col-lg-3 order-3">
                 <seccion>
-                    <h4 style="margin-top: 40px; text-align:center;">Notificaciones</h4>
-                    <div class="card w-100 bg-light" style="margin-top: 40px;">
-                        <div class="card-header">
-                            <a class="titleCard" data-bs-toggle="collapse" href="#collapseNotForos" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                Foros
-                            </a>
+                    <div class="side-wrapper">
+                        <div class="side-title">Notificaciones</div>
+                        <div class="card w-100">
+                            <div class="card-header">
+                                <a data-bs-toggle="collapse" href="#collapseNotForos" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Foros
+                                </a>
+                            </div>
+                            <div class="card-body collapse" id="collapseNotForos">
+                                @*<h5 class="card-title">Foros</h5>*@
+                                <div class="app-card__subtex">With supporting text below as a natural lead-in to additional content.</div>
+                                @*<a href="#" class="btn btn-primary">Button</a>*@
+                            </div>
                         </div>
-                        <div class="card-body collapse" id="collapseNotForos">
-@*                            <h5 class="card-title">Foros</h5>*@
-                            <ul class="notificaciones">
-                                <li>
-                                    Nueva publicación en foro "¿Inserte pregunta aquí?"
-                                </li>
-                            </ul>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                           @* <a href="#" class="btn btn-primary">Button</a>*@
+                        <div class="card w-100">
+                            <div class="card-header">
+                                <a data-bs-toggle="collapse" href="#collapseNotClubes" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Clubes
+                                </a>
+                            </div>
+                            <div class="card-body collapse" id="collapseNotClubes">
+                                @*<h5 class="card-title">Foros</h5>*@
+                                <div class="app-card__subtex">With supporting text below as a natural lead-in to additional content.</div>
+                                @*<a href="#" class="btn btn-primary">Button</a>*@
+                            </div>
                         </div>
-                    </div>
-                    <div class="card w-100 bg-light" style="margin-top: 40px;">
-                        <div class="card-header">
-                            <a class="titleCard" data-bs-toggle="collapse" href="#collapseNotClubes" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                Clubes
-                            </a>
-                        </div>
-                        <div class="card-body collapse" id="collapseNotClubes">
-                            <h5 class="card-title">Clubes</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            @*<a href="#" class="btn btn-primary">Button</a>*@
-                        </div>
-                    </div>
-                    <div class="card w-100 bg-light" style="margin-top: 40px;">
-                        <div class="card-header">
-                            <a class="titleCard" data-bs-toggle="collapse" href="#collapseNotSugerencias" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                Sugerencias
-                            </a>
-                        </div>
-                        <div class="card-body collapse" id="collapseNotSugerencias">
-                            <h5 class="card-title">Sugerencias</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            @*<a href="#" class="btn btn-primary">Button</a>*@
+                        <div class="card w-100">
+                            <div class="card-header">
+                                <a data-bs-toggle="collapse" href="#collapseNotLecturas" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Lecturas
+                                </a>
+                            </div>
+                            <div class="card-body collapse" id="collapseNotLecturas">
+                                @*<h5 class="card-title">Foros</h5>*@
+                                <div class="app-card__subtex">With supporting text below as a natural lead-in to additional content.</div>
+                                @*<a href="#" class="btn btn-primary">Button</a>*@
+                            </div>
                         </div>
                     </div>
                 </seccion>
             </div>
         </div>
-
+        <div class="overlay-app"></div>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            @await Html.PartialAsync("footer.cshtml")
+        </footer>
     </div>
-
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        @await Html.PartialAsync("footer.cshtml")
-    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
