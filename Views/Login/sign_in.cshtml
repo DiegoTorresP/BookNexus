@@ -77,13 +77,16 @@
                                     <img src="~/assets/img/illustrations/login.svg" alt="login image">
                                 </div>
                                 <div class="col-12 col-lg-7 px-3 py-5 px-sm-5 px-md-6">
+                                    <div class="text-right text-md-right mb-4 mt-md-0">
+                                        <a class="dropdown-item" asp-area="" asp-controller="Login" asp-action="Inicio">Ir al Inicio</a>
+                                    </div>
                                     <div class="text-center text-md-center mb-4 mt-md-0">
-                                        <h1 class="mb-0 h3">Sign in to our platform</h1>
+                                        <h1 class="mb-0 h3">Inicia Sesión en la plataforma</h1>
                                     </div>
                                     <form action="#" class="mt-4">
                                         <!-- Form -->
                                         <div class="form-group mb-4">
-                                            <label for="exampleInputEmailCard1">Your Email</label>
+                                            <label for="exampleInputEmailCard1">Tu correo</label>
                                             <div class="input-group">
                                                 <span class="input-group-text" id="basic-addon1"><span class="fas fa-envelope"></span></span>
                                                 <input type="email" class="form-control" placeholder="example@company.com" id="txtEmail">
@@ -93,7 +96,7 @@
                                         <div class="form-group">
                                             <!-- Form -->
                                             <div class="form-group mb-4">
-                                                <label for="exampleInputPasswordCard1">Your Password</label>
+                                                <label for="exampleInputPasswordCard1">Tu contraseña</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text" id="basic-addon2"><span class="fas fa-unlock-alt"></span></span>
                                                     <input type="password" placeholder="Password" class="form-control" id="txtPassword">
@@ -104,18 +107,18 @@
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
                                                     <label class="form-check-label" for="defaultCheck5">
-                                                        Remember me
+                                                        Recordar
                                                     </label>
                                                 </div>
-                                                <div><a href="#" class="small text-right">Lost password?</a></div>
+                                                <div><a href="#" class="small text-right">¿Olvidaste tu contraseña?</a></div>
                                             </div>
                                         </div>
-                                        <button type="submit" class="btn btn-block btn-primary" id="hbtnInicioSesion">Sign in</button>
+                                        <button type="submit" class="btn btn-block btn-primary" id="hbtnInicioSesion">Iniciar</button>
                                     </form>
                                     <div class="d-flex justify-content-center align-items-center mt-4">
                                         <span class="font-weight-normal">
-                                            Not registered?
-                                            <a asp-area="" asp-controller="Login" asp-action="SignUp" class="font-weight-bold">Create account</a>
+                                            ¿No estas registrado?
+                                            <a asp-area="" asp-controller="Login" asp-action="SignUp" class="font-weight-bold">Crea una cuenta</a>
                                         </span>
                                     </div>
                                 </div>

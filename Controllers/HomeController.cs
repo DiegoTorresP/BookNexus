@@ -25,7 +25,11 @@ namespace BookNexus.Controllers
         {
             return View();
         }
-
+        [Breadcrumb("Sitemap")]
+        public IActionResult Sitemap()
+        {
+            return View("sitemap");
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         [Breadcrumb("Error")]
         public IActionResult Error()
