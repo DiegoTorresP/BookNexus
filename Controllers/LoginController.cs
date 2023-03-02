@@ -23,18 +23,8 @@ namespace BookNexus.Controllers
         }
         public ActionResult LogOut()
         {
-            HttpContext.Session.Remove("_Name");
-            HttpContext.Session.Remove("_Age");
+            HttpContext.Session.Clear();
             return View("sign_in");
-        }
-        [HttpPost]
-        public Login validarSesion(string Email, string Password)
-        {
-            Login obj_login = new Login(Email, Password, 0);
-            obj_login.Email = Email;
-            obj_login.Password = Password;
-            obj_login.validarSesion();
-            return obj_login;
         }
     }
 }

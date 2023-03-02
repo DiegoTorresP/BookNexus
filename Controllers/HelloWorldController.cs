@@ -10,7 +10,8 @@ namespace MvcMovie.Controllers
         [Breadcrumb("Tu Perfil")]
         public IActionResult Index()
         {
-            string name = HttpContext.Session.GetString("Name");
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
             return View(model: name);
         }
 
@@ -22,7 +23,6 @@ namespace MvcMovie.Controllers
         {
             ViewData["Message"] = "Hello " + name;
             ViewData["NumTimes"] = numTimes;
-
             return View();
         }
     }

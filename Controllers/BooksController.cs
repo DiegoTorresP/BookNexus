@@ -24,13 +24,17 @@ namespace BookNexus.Controllers
         [Breadcrumb("Lista de Libros")]
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Book.ToListAsync());
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
+            return View(await _context.Book.ToListAsync());
         }
 
         // GET: Books/Details/5
         [Breadcrumb("Detalles")]
         public async Task<IActionResult> Details(int? id)
         {
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
             if (id == null || _context.Book == null)
             {
                 return NotFound();
@@ -50,6 +54,8 @@ namespace BookNexus.Controllers
         [Breadcrumb("Crear")]
         public IActionResult Create()
         {
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
             return View();
         }
 
@@ -66,6 +72,8 @@ namespace BookNexus.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
             return View(book);
         }
 
@@ -83,6 +91,8 @@ namespace BookNexus.Controllers
             {
                 return NotFound();
             }
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
             return View(book);
         }
 
@@ -118,6 +128,8 @@ namespace BookNexus.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
             return View(book);
         }
 
@@ -137,7 +149,8 @@ namespace BookNexus.Controllers
             {
                 return NotFound();
             }
-
+            string name = HttpContext.Session.GetString("NameUser");
+            ViewBag.Usuario = name;
             return View(book);
         }
 
