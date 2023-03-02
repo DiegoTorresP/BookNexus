@@ -10,7 +10,8 @@ namespace MvcMovie.Controllers
         [Breadcrumb("Tu Perfil")]
         public IActionResult Index()
         {
-            return View();
+            string name = HttpContext.Session.GetString("Name");
+            return View(model: name);
         }
 
         // GET: /HelloWorld/Welcome/ 

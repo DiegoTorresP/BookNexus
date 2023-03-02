@@ -27,6 +27,7 @@ namespace BookNexus.Data
         public Login validarSesion() {
             Login login = new Login("","",0);
             login = new Login(Email, Password, isValidate);
+  
             return login;
         }
 

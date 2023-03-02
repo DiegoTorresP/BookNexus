@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BookNexus.Data;
 using BookNexus.Models;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BookNexus.Controllers
 {
@@ -162,7 +163,21 @@ namespace BookNexus.Controllers
 
         public bool UsuariosExistsValidation(string Email, string Password)
         {
-            return _context.Usuarios.Any(e => e.Correo == Email && e.password == Password);
+            Boolean sesionvalida = _context.Usuarios.Any(e => e.Correo == Email && e.password == Password);
+
+            if (sesionvalida) {
+                string query = "SELECT * FROM Usuarios WHERE Correo = {0} and password = {1}";
+                var usuario = _context.Usuarios.FromSqlRaw(query, Email, Password).ToList();
+                if (!usuario.IsNullOrEmpty()) {
+                    var primerUsuario = usuario.FirstOrDefault();
+                    if (primerUsuario != null)
+                    {
+                        HttpContext.Session.SetString("NameUser", primerUsuario.NombreUsuario);
+                        HttpContext.Session.SetString("Name", primerUsuario.Nombre);
+                    }
+                }
+            }
+            return sesionvalida;
         }
     }
 }

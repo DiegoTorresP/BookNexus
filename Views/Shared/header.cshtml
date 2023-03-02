@@ -1,4 +1,6 @@
-﻿<!-- Navbar -->
+﻿
+@model string
+<!-- Navbar -->
 <div class="header">
     <div class="col">
         <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">
@@ -34,7 +36,7 @@
             </button>
         </div>*@
         <div>
-            <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link text-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">@Model
                 @*            <p>@ViewBag.nombre</p>*@
                 <img class="profile-img" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" />
             </a>
