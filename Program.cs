@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using BookNexus.Data;
+using BookNexus;
 using SmartBreadcrumbs.Extensions;
 using System.Reflection;
 using Azure.Identity;
@@ -21,8 +22,8 @@ builder.Services.AddBreadcrumbs(Assembly.GetExecutingAssembly(), options =>
 });
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddMvc();
+builder.Services.AddTransient<SessionMiddleware>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -46,12 +47,15 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();
-
+app.UseWhen(context => !context.Request.Path.StartsWithSegments("/Login") && !context.Request.Path.StartsWithSegments("/Usuarios"), builder =>
+{
+    builder.UseMiddleware<SessionMiddleware>();
+});
+//app.UseMiddleware<SessionMiddleware>();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Login}/{action=Index}/{id?}"
     );
-
 app.Run();

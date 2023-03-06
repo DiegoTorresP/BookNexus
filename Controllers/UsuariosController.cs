@@ -62,9 +62,11 @@ namespace BookNexus.Controllers
             {
                 _context.Add(usuarios);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                TempData["toInitSession"] = 1;
+                return RedirectToAction("SignIn", "Login", 1);
             }
-            return View(usuarios);
+
+            return RedirectToAction("SignIn", "Login",1);
         }
 
         // GET: Usuarios/Edit/5

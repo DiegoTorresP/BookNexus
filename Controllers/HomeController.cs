@@ -21,7 +21,6 @@ namespace BookNexus.Controllers
             ViewBag.Usuario = name;
             return View();
         }
-
         [Breadcrumb("Privacy")]
         public IActionResult Privacy()
         {

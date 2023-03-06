@@ -103,8 +103,8 @@
                 </ul>
             </div>
             <div class="d-flex align-items-center">
-                <a asp-area="" asp-controller="Login" asp-action="SignUp" class="btn btn-outline-soft d-none d-md-inline mr-md-3 animate-up-2" style="color: white;">Registrate</a>
-                <a asp-area="" asp-controller="Login" asp-action="LogOut" class="btn btn-md btn-tertiary text-white d-none d-md-inline animate-up-2">Inicia Sesión<i class="fas fa-rocket ml-2"></i></a>
+                <a asp-area="" asp-controller="Usuarios" asp-action="Create" class="btn btn-outline-soft d-none d-md-inline mr-md-3 animate-up-2" style="color: white;">Registrate</a>
+                    <a asp-area="" asp-controller="Login" asp-action="SignIn" class="btn btn-md btn-tertiary text-white d-none d-md-inline animate-up-2">Inicia Sesión<i class="fas fa-rocket ml-2"></i></a>
                 <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -123,7 +123,7 @@
                         </h1>
                         <p class="lead mb-4 mb-lg-5">Descubre nuevos libros y conversaciones, únete a clubes de lectura y conéctate con amantes de los libros en todo el mundo.</p>
                         <div>
-                            <a asp-area="" asp-controller="Login" asp-action="LogOut" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                            <a asp-area="" asp-controller="Login" asp-action="SignIn" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-sign-in-alt"></span></span>
                                     <span class="d-inline-block text-left">
@@ -131,7 +131,7 @@
                                     </span> 
                                 </span>
                             </a>
-                            <a asp-area="" asp-controller="Login" asp-action="SignUp" class="btn btn-dark btn-download-app">
+                            <a asp-area="" asp-controller="Usuarios" asp-action="Create" class="btn btn-dark btn-download-app">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-keyboard"></span></span>
                                     <span class="d-inline-block text-left">
@@ -331,7 +331,7 @@
                         <h2 class="display-3 mb-4">Sé parte de esta historia.</h2>
                         <p class="lead text-muted">Únete a Bookzu y descubre un mundo lleno de posibilidades literarias ¡Únete hoy mismo y forma parte de una comunidad de amantes de la lectura! </p>
                         <div class="mt-4 mt-lg-5">
-                            <a asp-area="" asp-controller="Login" asp-action="LogOut" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
+                            <a asp-area="" asp-controller="Login" asp-action="SignIn" class="btn btn-dark btn-download-app mb-xl-0 mr-2 mr-md-3">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-sign-in-alt"></span></span>
                                     <span class="d-inline-block text-left">
@@ -339,7 +339,7 @@
                                     </span>
                                 </span>
                             </a>
-                            <a asp-area="" asp-controller="Login" asp-action="SignUp" class="btn btn-dark btn-download-app">
+                            <a asp-area="" asp-controller="Usuarios" asp-action="Create" class="btn btn-dark btn-download-app">
                                 <span class="d-flex align-items-center">
                                     <span class="icon icon-brand mr-2 mr-md-3"><span class="fas fa-keyboard"></span></span>
                                     <span class="d-inline-block text-left">

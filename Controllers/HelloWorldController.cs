@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Text.Encodings.Web;
 using SmartBreadcrumbs.Attributes;
+
 namespace MvcMovie.Controllers
 {
     public class HelloWorldController : Controller
@@ -17,7 +18,6 @@ namespace MvcMovie.Controllers
 
         // GET: /HelloWorld/Welcome/ 
         // Requires using System.Text.Encodings.Web;
-
         [Breadcrumb("Visitas")]
         public IActionResult Welcome(string name, int numTimes = 1)
         {
